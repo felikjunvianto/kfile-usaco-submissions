@@ -1,29 +1,9 @@
-# Compiled Object files
-*.slo
-*.lo
+# I/O testcase helper files
+*/*.in
+*/*.out
+in.txt
+out.txt
+
+# Compile results
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app

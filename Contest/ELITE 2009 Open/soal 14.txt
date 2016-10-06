@@ -1,0 +1,95 @@
+Soal 14: Gua Harta Karun [Rob Kolstad, 2009]
+
+Kakek Bessie adalah bajak laut yang mengumpulkan harta karun yang
+disembunyikan di dalam sebuah gua. Gua ini yang baru saja Bessie 
+temukan berada di tanah Petani John! Di tempat masuk gua, dia 
+menemukan sebuah peta yang membantunya untuk mengumpulkan harta
+karun. 
+
+Gua tersebut memiliki P rongga (3 <= P <= 5000) yang diberi nomor
+1..P. Tempat masuk gua adalah rongga 1; harta karun terletak di
+sebuah rongga T (2 <= T <= P), yang nilainya diberikan. Setiap 
+rongga memiliki panjang yang sama; pada ujung setiap rongga 
+terdapat percabangan yang menyebabkan sapi yang melaluinya 
+masuk ke dalam tanah lebih jauh. Tidak ada rongga yang dapat 
+dilalui lebih dari satu percabangan, dan pada peta tertera NS
+percabangan (1 <= NS <= 5000).
+
+Bessie ingin tahu berapa jauh dari tempat masuk gua harta karun 
+kakeknya berada dan juga nomor-nomor rongga yang perlu dilaluinya
+untuk mencapai lokasi harta karun.
+
+Berikut ini contoh peta sebuah gua. Nomor rongga sesuai dengan 
+label yang ada. Pada contoh ini, harta karun berada di akhir rongga
+nomor 7.
+
+                   3/
+                   /
+                  +
+                 / \   /5
+               2/  4\ /
+           1   /     +
+          ----+      6\   #7    /11
+               \       \ /     /
+              13\       +     +
+                        8\ 10/ \
+                          \ /   \12
+                           +
+                           9\
+                             \
+
+Bessie harus melalui rongga 1, 2, 4, 6, dan 7 untuk mencapai lokasi
+harta karun, dengan total jarak 5 (yang merupakan jumlah rongga).
+
+Berkas masukan berisi sejumlah baris yang menyatakan nomor rongga
+N (1 <= N <=  P) dan dua rongga (B1 dan B2; 1 <= B1 <= P; 1 <= B2 
+<= P) yang merupakan percabangan dari rongga tersebut. Ada sebuah
+baris pada berkas masukan yang menyatakan nomor rongga 1 dan dua 
+percabangannya (pada contoh kita, rongga 2 dan 13; dengan cara yang
+sama, rongga 8 memiliki dua cabang: 9 dan 10).  
+
+Tunjukkan Bessie jalan untuk mencapai lokasi harta karun.
+
+NAMA SOAL: tcave
+
+BENTUK MASUKAN:
+
+* Baris 1: Baris 1 berisi tiga bilangan bulat dipisahkan spasi: P, NS dan T
+
+* Baris 2..NS+1: Setiap baris berisi tiga bilangan bulat dipisahkan spasi:
+        N, B1, dan B2
+
+CONTOH MASUKAN (berkas tcave.in):
+
+13 6 7
+6 7 8
+2 3 4
+10 11 12
+8 9 10
+1 2 13
+4 5 6
+
+PENJELASAN MASUKAN:
+
+Masukan merupakan contoh gua pada deskripsi soal.
+
+BENTUK KELUARAN:
+
+* Baris 1: Jarak D dari tempat masuk gua ke harta karun
+
+* Baris 2..D+1: Baris i+1 berisi sebuah bilangan bulat yang
+        merupakan rongga berikutnya yang perlu dilalui Bessie
+        untuk mencapai harta karun.
+
+CONTOH KELUARAN (berkas tcave.out):
+
+5
+1
+2
+4
+6
+7
+
+PENJELASAN KELUARAN:
+
+Seperti pada deskripsi soal.

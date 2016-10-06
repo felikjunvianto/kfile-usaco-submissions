@@ -1,0 +1,41 @@
+/*
+	ID: felikju1
+	PROG: 
+	LANG: C++
+*/
+
+#include <cstdio>
+#include <cmath>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <algorithm>
+#include <vector>
+#include <stack>
+#include <queue>
+#include <map>
+
+#define fi first
+#define se second
+#define pb push_back
+#define mp make_pair
+#define pii pair<int,int> 
+#define pdd pair<double,double> 
+#define ll long long
+
+#define PI 2*acos(0.0)
+#define EPS 1e-9
+#define INF 1000000000
+
+using namespace std;
+
+
+int main()
+{
+	freopen (".in","r",stdin);
+	freopen (".out","w",stdout);
+	
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

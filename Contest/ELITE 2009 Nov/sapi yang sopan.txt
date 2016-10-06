@@ -1,0 +1,90 @@
+Soal 12: Sapi Yang Sopan [Rob Kolstad, 2009]
+
+Petani John menukar satu dari sapi-sapinya untuk seekor sapi yang
+disebut Petani Don 'The Knight'. Sapi tersebut memiliki kemampuan yang
+unik yakni melompat di ladang dengan cara yang mirip seperti pergerakan
+knight (ind. kuda) pada papan catur (melompat dua kotak, lalu naik satu
+atau mungkin turun dua kotak lalu melompat satu kotak, dll.).
+The Knight tidak dapat melompat di batu atau pohon, tapi ia bebas
+berkeliling-keliling di ladang, yang dipartisi untuk keperluan kita
+menjadi kotak berukuran X kali Y (1 <= X <= 150; 1 <= Y <= 150).
+
+The Knight menyukai jerami seperti sapi lainnya. Diberikan peta berisi
+tempat asal The Knight, lokasi-lokasi pohon, semak-semak, batu, dan
+rintangan lainnya, dan lokasi sebungkus jerami, tentukan berapa banyak
+lompatan yang harus dilakukan The Knight untuk mendapatkan jerami.
+Sapi The Knight akan diwakili oleh 'K' pada peta; rintangan oleh '*',
+dan jerami oleh 'H'. Berikut ini contoh peta pada umumnya:
+
+                    11 | . . . . . . . . . .
+                    10 | . . . . * . . . . . 
+                     9 | . . . . . . . . . . 
+                     8 | . . . * . * . . . . 
+                     7 | . . . . . . . * . . 
+                     6 | . . * . . * . . . H 
+                     5 | * . . . . . . . . . 
+                     4 | . . . * . . . * . . 
+                     3 | . K . . . . . . . . 
+                     2 | . . . * . . . . . * 
+                     1 | . . * . . . . * . . 
+                     0 ----------------------
+                                           1 
+                       0 1 2 3 4 5 6 7 8 9 0 
+
+The knight dapat mengikuti rute yang ditandai oleh A, B, C, ... untuk
+mendapatkan sebungkus jerami hanya dalam 5 langkah (rute lainnya dengan
+panjang 5 juga mungkin ada):
+
+                    11 | . . . . . . . . . .
+                    10 | . . . . * . . . . .
+                     9 | . . . . . . . . . .
+                     8 | . . . * . * . . . .
+                     7 | . . . . . . . * . .
+                     6 | . . * . . * . . . F<
+                     5 | * . B . . . . . . .
+                     4 | . . . * C . . * E .
+                     3 | .>A . . . . D . . .
+                     2 | . . . * . . . . . *
+                     1 | . . * . . . . * . .
+                     0 ----------------------
+                                           1
+                       0 1 2 3 4 5 6 7 8 9 0
+
+Petunjuk: Soal ini dapat diselesaikan dengan mudah menggunakan rekursi
+sederhana dan struktur data first-in/first-out 'queue' yang
+diimplementasikan menggunakan beberapa array paralel.
+
+NAMA SOAL: kcow
+
+FORMAT MASUKAN:
+
+* Baris 1: Dua buah bilangan bulat dipisahkan spasi: X dan Y
+
+* Baris 2..Y+1: Baris ke-(Y-i+2) berisi baris ke-i dari peta (peta dibaca
+        dengan cara seperti tertulis di atas) diwakilkan oleh X
+        karakter tanpa spasi: baris peta ke-(Y-i+2).
+
+CONTOH MASUKAN (berkas kcow.in):
+
+10 11
+..........
+....*.....
+..........
+...*.*....
+.......*..
+..*..*...H
+*.........
+...*...*..
+.K........
+...*.....*
+..*....*..
+
+FORMAT KELUARAN:
+
+* Baris 1: Sebuah bilangan bulat yang merupakan jumlah lompatan minimum
+        untuk mendapatkan jerami. Selalu ada jalan untuk mendapatkan
+        jerami.
+
+CONTOH KELUARAN (berkas kcow.out):
+
+5
